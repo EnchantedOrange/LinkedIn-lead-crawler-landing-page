@@ -92,7 +92,8 @@ header:hover {
     #body #desc * {
       text-align: center; }
     #body #desc #tablets-logo {
-      display: none; }
+      display: none;
+      background: url("In-2C-115px-TM.png"); }
     #body #desc h1 {
       font-size: 72px;
       letter-spacing: 0.03em;
@@ -259,10 +260,13 @@ header:hover {
       font-size: 24px;
       color: #737373;
       outline: none;
-      font-weight: 300; }
+      font-weight: 300;
+      margin: 10px auto; }
     #contact-us form textarea {
       flex-basis: 13em;
       resize: none; }
+    #contact-us form input:last-child {
+      margin: 20px auto; }
     #contact-us form .input-to-style::placeholder {
       font-weight: 300;
       line-height: normal;
@@ -296,13 +300,16 @@ footer {
   background-color: #0077B5;
   width: 100%;
   height: 80px;
-  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.25); }
+  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.25);
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
   footer p {
     font-weight: normal;
     font-size: 30px;
     color: #FFFFFF;
-    text-align: center;
-    line-height: 80px; }
+    text-align: center; }
 
 @keyframes animateopacity {
   from {
@@ -381,7 +388,10 @@ footer {
     #body #desc {
       width: 75%; }
       #body #desc #tablets-logo {
-        display: inline-block; }
+        display: inline-block;
+        background: url("In-2C-115px-TM.png");
+        width: 115px;
+        height: 115px; }
       #body #desc h1 {
         margin: 0.3em;
         font-size: 96px; }
@@ -407,6 +417,7 @@ footer {
       width: 75%; }
       #body #desc #tablets-logo {
         display: inline-block;
+        background: url("In-2C-94px-TM.png");
         width: 94px;
         height: 94px; }
       #body #desc h1 {
