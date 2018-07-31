@@ -1,0 +1,627 @@
+$background-color: #FFFFFF;
+$link-color: #0077B5;
+$text-color: #333333;
+$text-color-light: #737373;
+$error-color: #DF8484;
+$input-focus-background: #FFFDFD;
+$light-blue-text: rgba(0, 119, 181, 0.6);
+$background-blue: rgba(0, 119, 181, 0.1);
+$text-size: 36px;
+$text-size-mid: 30px;
+$text-size-mini: 24px;
+
+
+
+* {
+  font-family: Roboto, sans-serif;
+}
+
+span {
+  color: $link-color;
+  font-weight: 500;
+}
+
+body {
+  background-color: $background-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+.big-blue-button {
+  color: $background-color;
+  font-size: $text-size;
+  text-align: center;
+  width: 400px;
+  height: 60px;
+  background-color: #0A9FDB;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin: auto;
+  padding: 0.2em 3em;
+  transition: background-color 300ms;
+  cursor: pointer;
+  border: none;
+}
+
+.big-blue-button:hover {
+  background-color: $link-color;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.25);
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  transition: background-color 300ms;
+
+  div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+
+    * {
+      font-weight: normal;
+    }
+  }
+
+  #logo {
+    width: 40%;
+    padding: 2em;
+    flex-grow: 3;
+
+    * {
+      margin: 0.2em;
+    }
+
+    h1 {
+      font-size: $text-size;
+      color: $text-color;
+      flex-grow: 3;
+    }
+  }
+
+  #links {
+    width: 45%;
+    flex-grow: 5;
+
+    a {
+      color: $link-color;
+
+      h2 {
+        font-size: $text-size-mini;
+      }
+    }
+  }
+}
+
+header:hover {
+  background-color: $link-color;
+
+  #logo h1 {
+    color: $background-color;
+  }
+
+  #links a {
+    color: $background-color;
+  }
+}
+
+#links a:hover {
+  text-decoration-line: underline;
+}
+
+.big-text {
+  color: $text-color;
+  letter-spacing: 0.03em;
+  font-size: 64px;
+  font-weight: normal;
+}
+
+#body {
+  position: relative;
+  top: 6em;
+  display: flex;
+  height: 30em;
+  width: 100%;
+
+  #desc {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+
+    * {
+      text-align: center;
+    }
+
+    #tablets-logo {
+      display: none;
+      background: url("In-2C-115px-TM.png");
+    }
+
+    h1 {
+      font-size: 72px;
+      letter-spacing: 0.03em;
+      font-weight: normal;
+      color: $text-color;
+    }
+
+    #available {
+      color: $link-color;
+      font-size: 22px;
+      margin-bottom: 2em;
+    }
+
+    #available:hover {
+      text-decoration-line: underline;
+    }
+
+    h1, p, div {
+      text-align: center;
+    }
+  }
+
+  img {
+    max-width: 794px;
+    max-height: 565px;
+    height: 100%;
+  }
+}
+
+.hiwtext {
+  font-size: $text-size-mini;
+  color: $text-color-light;
+}
+
+#hiw {
+  position: relative;
+  top: 8em;
+  margin: auto;
+  text-align: center;
+  p {
+    font-size: $text-size;
+    color: $text-color-light;
+  }
+}
+
+#steps {
+  margin-top: 20em;
+
+  .number {
+    width: 100%;
+    height: 50em;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .step {
+      width: 30%;
+    }
+
+    .llc-screen {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.33);
+      border-radius: 4px;
+    }
+  }
+
+  .step-with-background {
+    background: $background-blue;
+  }
+
+  .num {
+    font-family: "Open Sans", sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 130px;
+    color: $light-blue-text;
+    margin: 0;
+  }
+
+  #recommend {
+    color: $link-color;
+    font-style: italic;
+    font-size: $text-size-mini;
+  }
+}
+
+#fin {
+  text-align: center;
+  width: 35%;
+  margin: 10em auto;
+  p {
+    color: $text-color-light;
+    font-size: $text-size;
+  }
+}
+
+#reviews {
+  margin-top: 10em;
+  text-align: center;
+
+  h2 {
+    font-family: Numans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 300px;
+    text-align: center;
+    color: $light-blue-text;
+    margin: 0;
+  }
+
+  #review {
+    position: relative;
+    margin-top: -200px;
+
+    .review {
+      display: none;
+      position: relative;
+      animation: animateopacity 600ms;
+
+      h3 {
+        font-size: 36px;
+        color: $link-color;
+        font-weight: normal;
+      }
+
+      p {
+        font-weight: 300;
+        font-size: $text-size-mid;
+        color: $text-color-light;
+        width: 50%;
+        margin: auto;
+      }
+
+      a {
+        font-weight: normal;
+        font-size: 20px;
+        color: $link-color;
+        display: inline-block;
+        margin: 2em;
+      }
+    }
+  }
+
+  #slider-buttons {
+    width: 20%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+    .slider-button {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #C4C4C4;
+      cursor: pointer;
+      margin: 0.6em;
+      transition: background-color 300ms;
+    }
+
+    .active-slider-button {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #8E8C8C;
+      cursor: pointer;
+      margin: 0.6em;
+    }
+  }
+
+  #write-review {
+    width: 55%;
+    background-color: $background-blue;
+    border: 1px solid $link-color;
+    border-radius: 30px;
+    margin: 4em auto;
+    text-align: center;
+    padding: 3em;
+
+    p {
+      font-weight: normal;
+      font-size: $text-size-mini;
+      color: $text-color-light;
+      width: 70%;
+      text-align: center;
+      margin: 0 auto 2em auto;
+    }
+  }
+}
+
+#contact-us {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    width: 100%;
+    margin: 0 auto 1.5em auto;
+    font-weight: normal;
+    font-size: $text-size;
+    color: $text-color-light;
+    text-align: center;
+    padding: 1em;
+  }
+
+  form {
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+
+    .input-to-style {
+      border: 1px solid $text-color-light;
+      border-radius: 20px;
+      width: 100%;
+      height: 2em;
+      padding: 0.5em 1.5em;
+      text-align: left;
+      font-size: $text-size-mini;
+      color: $text-color-light;
+      outline: none;
+      font-weight: 300;
+      margin: 10px auto;
+    }
+
+    textarea {
+      flex-basis: 13em;
+      resize: none;
+    }
+
+    input:last-child {
+      margin: 20px auto;
+    }
+
+    .input-to-style::placeholder {
+      font-weight: 300;
+      line-height: normal;
+      font-size: $text-size-mini;
+      color: $text-color-light;
+    }
+
+    .input-to-style:hover {
+      border-color: $link-color;
+    }
+
+    .input-to-style:focus {
+      background: $input-focus-background;
+      border: 1px solid $link-color;
+      box-shadow: 0 0 10px $link-color;
+    }
+
+    .input-to-style:invalid {
+      background: $input-focus-background;
+      border-color: $error-color;
+      box-shadow: 0 0 10px $error-color;
+      color: $error-color;
+    }
+  }
+
+  #responsive-contact-us {
+    font-weight: normal;
+    font-size: $text-size-mid;
+    text-align: center;
+  }
+}
+
+/*Classes for id="responsive-contact-us"*/
+
+.active {
+  color: $link-color;
+}
+
+.error {
+  color: $error-color;
+}
+
+/*======================================*/
+
+footer {
+  background-color: $link-color;
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.25);
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-weight: normal;
+    font-size: $text-size-mid;
+    color: $background-color;
+    text-align: center;
+  }
+}
+
+@keyframes animateopacity {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@-webkit-keyframes polygon {
+  0% {
+    stroke-dasharray:0 300;
+  }
+
+  100% {
+    stroke-dasharray:300 0;
+  }
+}
+
+@keyframes polygon {
+  0% {
+    stroke-dasharray:0 300;
+  }
+
+  100% {
+    stroke-dasharray:300 0;
+  }
+}
+
+@-webkit-keyframes circle-glow {
+  0% { fill: #d7eaf2 }
+  50% { fill: #94bccc }
+  100% { fill: #0a9fdb }
+}
+
+@keyframes circle-glow {
+  0% { fill: #d7eaf2 }
+  50% { fill: #94bccc }
+  100% { fill: #0a9fdb }
+}
+
+.hexs {
+  position: relative;
+  top: 100px;
+
+  polygon {
+    stroke-width: 1;
+    fill: transparent;
+    stroke: #005e93;
+    stroke-miterlimit: 10;
+  }
+
+  .hex1 {
+    animation: 4s polygon forwards;
+    -webkit-animation: 4s polygon forwards;
+  }
+
+  .hex2 {
+    animation: 8s polygon forwards;
+    -webkit-animation: 8s polygon forwards;
+  }
+
+  .hex3 {
+    animation: 12s polygon alternate backwards;
+    -webkit-animation: 12s polygon alternate backwards;
+  }
+
+  .hex4 {
+    animation: 10s polygon alternate backwards;
+    -webkit-animation: 10s polygon alternate backwards;
+  }
+
+  circle {
+    fill: #0a9fdb;
+    -webkit-animation-name: circle-glow;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-direction: alternate;
+
+    animation-name: circle-glow;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+  }
+}
+
+#hex1 {
+  margin-top: 7em;
+}
+
+#hex2 {
+  margin-top: -50px;
+}
+
+@media all and (min-width: 640px) and (max-width: 992px) {
+  header, #steps, .hexs, #hiw, #fin, #reviews, #contact-us, footer {
+    display: none;
+  }
+
+  #body {
+    top: 3em;
+
+    #desc {
+      width: 75%;
+
+      #tablets-logo {
+        display: inline-block;
+        background: url("In-2C-115px-TM.png");
+        width: 115px;
+        height: 115px;
+      }
+
+      h1 {
+        margin: 0.3em;
+        font-size: 96px;
+      }
+
+      .hiwtext {
+        width: 70%;
+        margin: auto;
+        font-size: 48px;
+      }
+
+      #available {
+        font-size: 32px;
+      }
+
+      #install div {
+        width: 500px;
+        height: 70px;
+        margin-bottom: 1.5em;
+      }
+    }
+
+    img {
+      display: none;
+    }
+  }
+}
+
+@media all and (max-width: 639px) {
+  header, #steps, .hexs, #hiw, #fin, #reviews, #contact-us, footer {
+    display: none;
+  }
+
+  #body {
+    top: 3em;
+
+    #desc {
+      width: 75%;
+
+      #tablets-logo {
+        display: inline-block;
+        background: url("In-2C-94px-TM.png");
+        width: 94px;
+        height: 94px;
+      }
+
+      h1 {
+        font-size: 48px;
+        margin-top: 2em;
+      }
+
+      .hiwtext {
+        width: 100%;
+        margin: auto;
+        font-size: $text-size-mini;
+      }
+
+      #available {
+        font-size: 18px;
+      }
+
+      #install div {
+        width: 300px;
+        height: 70px;
+        margin-top: 2em;
+        margin-bottom: 1.5em;
+      }
+    }
+
+    img {
+      display: none;
+    }
+  }
+}
