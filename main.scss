@@ -12,17 +12,14 @@ $text-size-mini: 24px;
 
 
 
-* {
-  font-family: Roboto, sans-serif;
-}
-
-span {
+.important-text {
   color: $link-color;
   font-weight: 500;
 }
 
 body {
   background-color: $background-color;
+  font-family: Roboto, sans-serif;
 }
 
 a {
@@ -38,15 +35,19 @@ a {
   background-color: #0A9FDB;
   border-radius: 10px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  margin: auto;
-  padding: 0.2em 3em;
   transition: background-color 300ms;
   cursor: pointer;
   border: none;
+  line-height: 60px;
+
+  &:hover {
+    background-color: $link-color;
+  }
 }
 
-.big-blue-button:hover {
-  background-color: $link-color;
+.button-wrapper {
+  display: inline-block;
+  margin: auto;
 }
 
 header {
@@ -65,12 +66,12 @@ header {
     align-items: center;
     align-content: center;
 
-    * {
+    .header-text {
       font-weight: normal;
     }
   }
 
-  #logo {
+  .logo {
     width: 40%;
     padding: 2em;
     flex-grow: 3;
@@ -118,7 +119,6 @@ header:hover {
 
 .big-text {
   color: $text-color;
-  letter-spacing: 0.03em;
   font-size: 64px;
   font-weight: normal;
 }
@@ -135,13 +135,9 @@ header:hover {
     margin: auto;
     text-align: center;
 
-    * {
-      text-align: center;
-    }
-
     #tablets-logo {
       display: none;
-      background: url("In-2C-115px-TM.png");
+      background: url("images/In-2C-115px-TM.png");
     }
 
     h1 {
@@ -159,10 +155,6 @@ header:hover {
 
     #available:hover {
       text-decoration-line: underline;
-    }
-
-    h1, p, div {
-      text-align: center;
     }
   }
 
@@ -183,6 +175,7 @@ header:hover {
   top: 8em;
   margin: auto;
   text-align: center;
+
   p {
     font-size: $text-size;
     color: $text-color-light;
@@ -191,6 +184,38 @@ header:hover {
 
 #steps {
   margin-top: 20em;
+
+  .arrow {
+    position: relative;
+  }
+
+  .arrow-1 {
+    bottom: 290px;
+    left: 85px;
+  }
+
+  .arrow-2 {
+    bottom: 180px;
+    right: 25px;
+  }
+
+  .arrow-3 {
+    position: relative;
+    bottom: 210px;
+    left: 25px;
+  }
+
+  .arrow-4 {
+    position: relative;
+    bottom: 185px;
+    right: 65px;
+  }
+
+  .arrow-5 {
+    position: relative;
+    right: 60px;
+    top: 25px;
+  }
 
   .number {
     width: 100%;
@@ -245,7 +270,7 @@ header:hover {
   margin-top: 10em;
   text-align: center;
 
-  h2 {
+  .quotemark {
     font-family: Numans, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -335,32 +360,35 @@ header:hover {
 }
 
 #contact-us {
-  width: 50%;
   text-align: center;
   margin: auto;
   display: flex;
   flex-direction: column;
 
-  p {
-    width: 100%;
+  p:first-of-type {
     margin: 0 auto 1.5em auto;
     font-weight: normal;
     font-size: $text-size;
     color: $text-color-light;
     text-align: center;
     padding: 1em;
+    width: 800px;
+  }
+
+  p:nth-of-type(2) {
+    margin: 2rem;
   }
 
   form {
     text-align: center;
     display: flex;
     flex-flow: column;
+    width: 800px;
+    margin: auto;
 
     .input-to-style {
       border: 1px solid $text-color-light;
       border-radius: 20px;
-      width: 100%;
-      height: 2em;
       padding: 0.5em 1.5em;
       text-align: left;
       font-size: $text-size-mini;
@@ -368,6 +396,9 @@ header:hover {
       outline: none;
       font-weight: 300;
       margin: 10px auto;
+      box-sizing: border-box;
+      width: 100%;
+      height: 60px;
     }
 
     textarea {
@@ -441,88 +472,14 @@ footer {
   }
 }
 
-@keyframes animateopacity {
-  from {opacity: 0}
-  to {opacity: 1}
-}
-
-@-webkit-keyframes polygon {
-  0% {
-    stroke-dasharray:0 300;
-  }
-
-  100% {
-    stroke-dasharray:300 0;
-  }
-}
-
-@keyframes polygon {
-  0% {
-    stroke-dasharray:0 300;
-  }
-
-  100% {
-    stroke-dasharray:300 0;
-  }
-}
-
-@-webkit-keyframes circle-glow {
-  0% { fill: #d7eaf2 }
-  50% { fill: #94bccc }
-  100% { fill: #0a9fdb }
-}
-
-@keyframes circle-glow {
-  0% { fill: #d7eaf2 }
-  50% { fill: #94bccc }
-  100% { fill: #0a9fdb }
-}
-
 .hexs {
   position: relative;
   top: 100px;
+}
 
-  polygon {
-    stroke-width: 1;
-    fill: transparent;
-    stroke: #005e93;
-    stroke-miterlimit: 10;
-  }
-
-  .hex1 {
-    animation: 4s polygon forwards;
-    -webkit-animation: 4s polygon forwards;
-  }
-
-  .hex2 {
-    animation: 8s polygon forwards;
-    -webkit-animation: 8s polygon forwards;
-  }
-
-  .hex3 {
-    animation: 12s polygon alternate backwards;
-    -webkit-animation: 12s polygon alternate backwards;
-  }
-
-  .hex4 {
-    animation: 10s polygon alternate backwards;
-    -webkit-animation: 10s polygon alternate backwards;
-  }
-
-  circle {
-    fill: #0a9fdb;
-    -webkit-animation-name: circle-glow;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-direction: alternate;
-
-    animation-name: circle-glow;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-    animation-direction: alternate;
-  }
+@keyframes animateopacity {
+  from {opacity: 0}
+  to {opacity: 1}
 }
 
 #hex1 {
@@ -546,7 +503,7 @@ footer {
 
       #tablets-logo {
         display: inline-block;
-        background: url("In-2C-115px-TM.png");
+        background: url("images/In-2C-115px-TM.png");
         width: 115px;
         height: 115px;
       }
@@ -592,7 +549,7 @@ footer {
 
       #tablets-logo {
         display: inline-block;
-        background: url("In-2C-94px-TM.png");
+        background: url("images/In-2C-115px-TM.png");
         width: 94px;
         height: 94px;
       }
