@@ -76,7 +76,7 @@ header {
     padding: 2em;
     flex-grow: 3;
 
-    * {
+    a, img, h1 {
       margin: 0.2em;
     }
 
@@ -87,7 +87,7 @@ header {
     }
   }
 
-  #links {
+  .links {
     width: 45%;
     flex-grow: 5;
 
@@ -104,16 +104,16 @@ header {
 header:hover {
   background-color: $link-color;
 
-  #logo h1 {
+  .logo h1 {
     color: $background-color;
   }
 
-  #links a {
+  .links a {
     color: $background-color;
   }
 }
 
-#links a:hover {
+.links a:hover {
   text-decoration-line: underline;
 }
 
@@ -123,19 +123,19 @@ header:hover {
   font-weight: normal;
 }
 
-#body {
+.body {
   position: relative;
   top: 6em;
   display: flex;
   height: 30em;
   width: 100%;
 
-  #desc {
+  .desc {
     width: 40%;
     margin: auto;
     text-align: center;
 
-    #tablets-logo {
+    .tablets-logo {
       display: none;
       background: url("images/In-2C-115px-TM.png");
     }
@@ -147,13 +147,13 @@ header:hover {
       color: $text-color;
     }
 
-    #available {
+    .available {
       color: $link-color;
       font-size: 22px;
       margin-bottom: 2em;
     }
 
-    #available:hover {
+    .available:hover {
       text-decoration-line: underline;
     }
   }
@@ -170,7 +170,7 @@ header:hover {
   color: $text-color-light;
 }
 
-#hiw {
+.hiw {
   position: relative;
   top: 8em;
   margin: auto;
@@ -182,7 +182,7 @@ header:hover {
   }
 }
 
-#steps {
+.steps {
   margin-top: 20em;
 
   .arrow {
@@ -249,14 +249,14 @@ header:hover {
     margin: 0;
   }
 
-  #recommend {
+  .recommend {
     color: $link-color;
     font-style: italic;
     font-size: $text-size-mini;
   }
 }
 
-#fin {
+.fin {
   text-align: center;
   width: 35%;
   margin: 10em auto;
@@ -266,7 +266,7 @@ header:hover {
   }
 }
 
-#reviews {
+.reviews {
   margin-top: 10em;
   text-align: center;
 
@@ -280,7 +280,7 @@ header:hover {
     margin: 0;
   }
 
-  #review {
+  .review-container {
     position: relative;
     margin-top: -200px;
 
@@ -313,7 +313,7 @@ header:hover {
     }
   }
 
-  #slider-buttons {
+  .slider-buttons {
     width: 20%;
     margin: auto;
     display: flex;
@@ -339,7 +339,7 @@ header:hover {
     }
   }
 
-  #write-review {
+  .write-review {
     width: 55%;
     background-color: $background-blue;
     border: 1px solid $link-color;
@@ -359,7 +359,7 @@ header:hover {
   }
 }
 
-#contact-us {
+.contact-us {
   text-align: center;
   margin: auto;
   display: flex;
@@ -435,7 +435,7 @@ header:hover {
     }
   }
 
-  #responsive-contact-us {
+  .responsive-contact-us {
     font-weight: normal;
     font-size: $text-size-mid;
     text-align: center;
@@ -482,26 +482,26 @@ footer {
   to {opacity: 1}
 }
 
-#hex1 {
+.hex1 {
   margin-top: 7em;
 }
 
-#hex2 {
+.hex2 {
   margin-top: -50px;
 }
 
 @media all and (min-width: 640px) and (max-width: 992px) {
-  header, #steps, .hexs, #hiw, #fin, #reviews, #contact-us, footer {
+  header, .steps, .hexs, .hiw, .fin, .reviews, .contact-us, footer {
     display: none;
   }
 
-  #body {
+  .body {
     top: 3em;
 
-    #desc {
+    .desc {
       width: 75%;
 
-      #tablets-logo {
+      .tablets-logo {
         display: inline-block;
         background: url("images/In-2C-115px-TM.png");
         width: 115px;
@@ -519,11 +519,11 @@ footer {
         font-size: 48px;
       }
 
-      #available {
+      .available {
         font-size: 32px;
       }
 
-      #install div {
+      .install div {
         width: 500px;
         height: 70px;
         margin-bottom: 1.5em;
@@ -537,17 +537,17 @@ footer {
 }
 
 @media all and (max-width: 639px) {
-  header, #steps, .hexs, #hiw, #fin, #reviews, #contact-us, footer {
+  header, .steps, .hexs, .hiw, .fin, .reviews, .contact-us, footer {
     display: none;
   }
 
-  #body {
+  .body {
     top: 3em;
 
-    #desc {
+    .desc {
       width: 75%;
 
-      #tablets-logo {
+      .tablets-logo {
         display: inline-block;
         background: url("images/In-2C-115px-TM.png");
         width: 94px;
@@ -565,11 +565,11 @@ footer {
         font-size: $text-size-mini;
       }
 
-      #available {
+      .available {
         font-size: 18px;
       }
 
-      #install div {
+      .install div {
         width: 300px;
         height: 70px;
         margin-top: 2em;
